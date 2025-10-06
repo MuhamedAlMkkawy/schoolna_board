@@ -7,7 +7,7 @@
           :title="props.headerTitle"
           :text="props.headerText"
         />
-        <BoardMainButton :buttonTitle="props.buttonTitle"/>
+        <BoardMainButton :buttonTitle="props.buttonTitle" :isReversed="true"/>
       </div>
       <div class="image mockup_image">
         <img data-aos="fade-up" data-aos-delay="200" :src="props.mockupImg" alt="image" loading="lazy"/>

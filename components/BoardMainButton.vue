@@ -85,6 +85,20 @@
         transform: translate(0);
       }
     }
+
+    &.reversed{
+      background: #fff;
+      color: $mainColor ;
+      
+      &:hover{
+        color: #fff;
+      }
+      .icon , 
+      &::after{
+        background: $mainColor;
+        color: #fff;
+      };
+    }
   }
 
 

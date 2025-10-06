@@ -67,7 +67,7 @@
     {
       id: 1,
       type: 'logo',
-      logo: boardLogo, // حط لوجو شركتك هنا
+      logo: boardLogo, 
       enDescription: 'Board G helps teams manage meetings and tasks efficiently, ensuring collaboration and accuracy',
       arDescription: 'يساعد Board G الفرق على إدارة الاجتماعات والمهام بكفاءة، مما يضمن التعاون والدقة',
       socialLinks: [
