@@ -1,0 +1,281 @@
+// ----------------> ABSTRACT
+@import "./abstract/variables";
+@import "./abstract/generic";
+@import "./abstract/mixins";
+@import "./abstract/form";
+
+
+// -----------------> COMPONENTS
+@import "./components/main-btn";
+// @import "./components/board_main-btn";
+@import "./components/flex-buttons";
+@import "./components/popup";
+@import "./components/schoolna_info_list";
+// --->>> BOARD 
+
+
+
+
+
+.container{
+  max-width: clamp(300px, 100%, 1220px);
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+
+h3.title{
+  text-align: center;
+  font-size: clamp(18px , 4vw , 24px);
+  font-weight: 500;
+}
+
+
+// style the schoolna info item in the pages except home , modules
+.page .schoolna_info_item {
+  .schoolna_info_text{
+    // max-width: unset !important;
+    flex-grow: 1;
+  }
+}
+
+
+
+// STYLE THE HEADER OF THE FEATURES IN ABOUT PAGE
+.schoolna_features_section{
+  position: relative;
+  z-index: 3;
+  &::after{
+    content: '';
+    background-image: url('../images/features_arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    width:120px;
+    height: 300px;
+    z-index: -3;
+    @media (max-width : 992px){
+      top: 20%;
+    }
+    @media (max-width : 767px){
+      display: none;
+    }
+  }
+  .schoolna_header{
+    h4{
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+  }
+  .schoolna_feature_item{
+    position: relative;
+    &:nth-of-type(2){
+      .schoolna_info_list{
+        li{
+          &::before{
+            filter: brightness(0) saturate(100%) invert(62%) sepia(47%) saturate(3004%) hue-rotate(0deg) brightness(103%) contrast(103%);
+          }
+        }
+      }
+    }
+    &:nth-of-type(3){
+      .schoolna_info_list{
+        @include displayFlex($wrap : wrap , $justify : flex-start , $align : flex-start);
+        li{
+          width:45% ;
+          &::before{
+            filter: brightness(0) saturate(100%) invert(46%) sepia(88%) saturate(3596%) hue-rotate(212deg) brightness(102%) contrast(101%);
+          }
+          @media (max-width : 767px){
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// HANDLE STYLING SCHOOLNA INFO STYLES IN [ PORTALS , FEATURES , BOARD  ] PAGE
+.board_page{
+  .schoolna_info_item{
+    .schoolna_info_text{
+      max-width: 50% !important;
+    }
+    &:first-of-type{
+      .image{
+        background: transparent;
+        width: 50%;
+        .p-image-preview{
+          position: unset;
+          box-shadow: unset !important;
+          .p-image-preview-mask{
+            display: none;
+          }
+          img{
+            object-fit: contain;
+          }
+        }
+      }
+      @media (max-width : 767px){
+        // flex-wrap: wrap-reverse;
+        .image{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .mockup_section{
+    .schoolna_header{
+      max-width: clamp(400px , 60% , 700px);
+      margin-inline-end: auto;
+      .text{
+        margin-bottom: 20px;
+      }
+      h4,
+      .text{
+        color: #fff;
+      }
+    }
+    @media (max-width : 767px){
+      margin-inline: 20px;
+      padding: 0;
+      .schoolna_header{
+        margin: 0 auto;
+      }
+      .flex_buttons{
+        justify-content: center !important;
+        .main-btn{
+          max-width: 320px;
+          width: 100%;
+        }
+      }
+
+      .board_main_btn{
+        margin-inline: auto;
+      }
+    }
+  }
+}
+
+
+// HANDLE STYLEING SCHOOLNA FEATURES PAGE
+.features_page{
+  .schoolna_about_features_section{
+    background: #F4FBFB;
+    .schoolna_about_features_content{
+      .schoolna_info_item{
+        flex-direction: row-reverse;
+        .image{
+          background: transparent;
+          width: 50%;
+          @media (max-width : 767px){
+            width: 100%;
+          }
+          img{
+            object-fit: contain;
+          }
+          .p-image-preview{
+            position: unset;
+            box-shadow: unset !important;
+            .p-image-preview-mask{
+              display: none;
+            }
+            &:hover{
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  section.schoolna_hero .schoolna_info_list{
+    flex-wrap: wrap !important;
+    li{
+      border-radius: 12px !important;
+      text-align: start;
+      gap: 8px;
+      @include textTruncate(2);
+      max-width: 48%;
+      padding: 8px 40px 5px;
+    }
+    @media (max-width : 767px){
+      flex-wrap: wrap !important;
+      li{
+        width: 100% !important;
+        @include textTruncate(unset) ;
+      }
+    }
+  }
+}
+
+
+
+
+// HANDLE STYLING LOGIN PAGE
+.login_page{
+  .language_switch{
+    margin: 150px auto 0;
+    .input{
+      width: 150px;
+      margin-inline: auto;
+      ul.languages-switch{
+        width: 100% !important;
+        a{
+          background: #fff;
+          color: $mainColor;
+          width: 100%;
+          margin-inline: auto; 
+          border-radius: 8px;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          width: 100% !important;
+          padding-block: 10px;
+          width: 100%;
+          transition: 0.2s;
+          &:hover{
+            background: $mainColor;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// TIME LINE AT BOARD INDEX PAGE
+.p-timeline-event-marker::before{
+  width: 100% !important;
+  height: 100% !important;
+  background: #3B6DA7 !important;
+}
+
+
+.p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(odd) .p-timeline-event-opposite{
+  display: flex;
+  justify-content: flex-end;
+  text-align: start !important;
+}
+
+
+.p-timeline-event-connector{
+  background: linear-gradient(90deg, #56C5FF 0%, #021748 100%) !important;
+}
+
+
+@media (max-width : 567px){
+  .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(odd) .p-timeline-event-content,
+  .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(even) .p-timeline-event-content,
+  .p-timeline-event-separator{
+    display: none !important;
+  }
+}

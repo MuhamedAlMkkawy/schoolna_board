@@ -1,0 +1,83 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "features": "Features",
+      "modules": "Modules",
+      "portals": "Portals",
+      "contactUs": "Contact us"
+    },
+    "buttons": {
+      "getStart": "Book your Demo"
+    }
+  },
+  "about_section": {
+    "header": {
+      "title": "About Board",
+      "text": "Streamline your board operations with Board, the smart system that helps you manage meetings and decisions effortlessly."
+    }
+  },
+  "features_section": {
+    "header" : {
+      "title": "Board at the Center of Every Feature",
+      "text": "Powerful Features for Smarter Meetings Board G at the Center of Every Feature — bringing all your boardroom essentials together in one place."
+    }
+  },
+  "timeline_section":{
+    "title": "How Your Board Works",
+    "text": "Board simplifies every stage of board management—from planning meetings to tracking outcomes with an intuitive, step-by-step flow."
+  },
+  "mockupSection": {
+    "headerTitle": "Run Your Board Smarter",
+    "headerText": "Take full control of your board’s operations by streamlining meetings, tracking decisions, managing tasks, and collaborating seamlessly—all within one secure, intuitive platform designed to save time and boost efficiency.",
+    "buttonTitle": "Get Your Smart System Now"
+  },
+  "footer": {
+    "sections": {
+      "logo": {
+        "description": "Board G helps teams manage meetings and tasks efficiently, ensuring collaboration and accuracy"
+      },
+      "pages": {
+        "title": "Explore",
+        "links": {
+          "home": "Home",
+          "about": "About",
+          "features": "Features",
+          "values": "Values"
+        }
+      },
+      "support": {
+        "title": "Support",
+        "links": {
+          "helpCenter": "Help Center",
+          "contactUs": "Contact Us",
+          "faqs": "FAQs",
+          "liveChat": "Live Chat"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "links": {
+          "privacyPolicy": "Privacy Policy",
+          "termsOfService": "Terms of Service",
+          "copyrightNotice": "Copyright Notice",
+          "cookiePolicy": "Cookie Policy"
+        }
+      }
+    },
+    "copyright": "Copyrights© 2025 Mazaya. All Rights Reserved"
+  },
+  "login_page" : {
+    "title" : "Login Page",
+    "email" : "Email",
+    "emailPlaceholder" : "Your Email",
+    "submit_button" : "Submit",
+    "validations": {
+      "email": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address"
+      }
+    }
+  }
+}
